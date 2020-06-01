@@ -11,7 +11,7 @@ exports.up = function(knex) {
             tbl.string('taskDes', 1000).notNullable();
             tbl.string('taskNotes', 1000);
             tbl.integer('projectId', 25).unsigned().references('id').inTable('projects');
-            tbl.boolean('complete').unsigned().notNullable().defaultTo(false);
+            tbl.boolean('completed').unsigned().notNullable().defaultTo(false);
         });
 };
 
