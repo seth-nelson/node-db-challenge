@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/seth-nelson/node-db-challenge/issues"
   },
-  "homepage": "https://github.com/seth-nelson/node-db-challenge#readme"
+  "homepage": "https://github.com/seth-nelson/node-db-challenge#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
