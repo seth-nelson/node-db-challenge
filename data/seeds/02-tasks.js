@@ -1,13 +1,11 @@
 
 exports.seed = function(knex) {
-  // Deletes ALL existing entries
-  return knex('table_name').del()
+  return knex('tasks').del()
     .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+      return knex('tasks').insert([
+        {taskDesc: 'purchase new alternator', taskNotes: 'Toyota OEM optional upgraded heavy duty cycle', projectId: 1},
+        {taskDesc: 'remove stock shocks and springs', taskNotes: 'truck will need to be properly set on jackstands', projectId: 2},
+        {taskDesc: 'use clay to pre-polish paint', taskNotes: 'make sure to use plenty of lubrication on the surface', projectId: 3}
       ]);
     });
 };

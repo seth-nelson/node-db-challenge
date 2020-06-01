@@ -6,7 +6,7 @@
 exports.up = function(knex) {
     return knex.schema
         .createTable('projects', tbl => {
-            tbl.increments('projectsId');
+            tbl.increments('projectId');
             tbl.string('projectName', 128).unique().notNullable();
             tbl.string('projectDesc', 1000);
             tbl.boolean('completed').notNullable().defaultTo(false);
